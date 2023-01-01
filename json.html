@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h2.center {
+        text-align: center;
+    }
+</style>
+<body>
+<h2>JSON Test</h2>
+<p style="border: solid; width: 20rem; text-align: center;">JSON (Javascript Object Notion)</p>
+
+<script>
+    //penulisan data array JSON
+    let person= '{"Name":[{"id":"Alice", "callsign":"Aliseye"}]}';
+
+    //dikonvert ke dengan JSON.parse()
+    const panggilan = JSON.parse(person);
+    document.writeln(`${panggilan.Name[0].id+" "+panggilan.Name[0].callsign}<br><br>`);
+
+    /* Latihan JSON Data Array Syntax to Javascript.
+    data penjualan. Jenisnya: Kaos=NSA,bambo,levis & Celana=PSD,levis,bahan.
+    */
+    let order = '{"Jenis": [{"kaos":"New State Apparel", "celana":"Peter Says Denim"}, {"kaos":"Bambo","celana":"Levis Jeans"}, {"kaos":"30s Oblong", "celana":"Bahan Kantor"}]}';
+
+    const penjualan = JSON.parse(order);
+
+    document.writeln(`${penjualan.Jenis[2].kaos} <br> ${penjualan.Jenis[2].celana}<br><br>`);
+
+    /*
+    Latihan2 JSON.
+    Menu makanan & minuman padang: rendang, telur balado, es jeruk, es kelapa. 
+    */
+
+   let menu = '{"padang": [{"makanan":"Rendang", "minuman":"Es Kelapa"}]}';
+
+   const makananPadang = JSON.parse(menu);
+
+   let menuPertama = makananPadang.padang[0].makanan;
+</script>
+<ul>
+    <li>
+        <script>document.writeln(`${makananPadang.padang[0].minuman}`);</script>
+    </li>
+
+    <li>
+        <script>document.writeln(menuPertama + '<br>')</script>
+    </li>
+</ul>
+<script>
+    /*cafe punya menu. coffe & non-coffee.
+    */
+    let cafe = '{"kopi": [{"coffee":"Americano",  "noncoffee":"Ice Tea"}]}';
+
+    const menuCoffee = JSON.parse(cafe);
+
+    const americano = menuCoffee.kopi[0].coffee;
+    const iceTea = menuCoffee.kopi[0].noncoffee;
+
+    const cafeMenu = [americano, iceTea];
+
+    document.writeln(cafeMenu[0]);
+</script>
+<br><br>
+<form>
+    <select name="" id="">
+        <option value="menu">
+            <script>document.writeln(cafeMenu[0]);</script>
+        </option>
+        <option value="non-coffee">
+            <script>document.writeln(cafeMenu[1]);</script>
+        </option>
+    </select>
+</form>
+
+<br><br>
+
+<script>
+{
+    let sekolah= '{"smk": ['+
+    '{"kelas1":"Kartika", "kelas2":"Natasya"},'+
+    '{"kelas1":"Alice", "kelas2":"Abdul"},'+
+    '{"kelas1":"Dera", "kelas2":"Danang"}]}';
+
+    const mm1 = JSON.parse(sekolah);
+
+    const danang = mm1.smk[2].kelas2;
+
+    const kelas1= mm1.smk[0].kelas1;
+    const tika = kelas1;
+
+    document.writeln(tika, danang);
+}
+</script>
+<br><br>
+<script>
+    let bakso = '{"komplit": [{"paket1":"Bakso Tahu", "paket2":"Bakso Somay"}]}';
+
+    const baksoKu=JSON.parse(bakso);
+
+    document.writeln(baksoKu.komplit[0].paket2);
+</script>
+
+</body>
+</html>

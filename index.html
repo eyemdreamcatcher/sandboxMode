@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<style>
+.container {
+    outline: dashed 1px yellowgreen;
+    }
+
+.row {
+    height: 120px;
+    background-image: linear-gradient(#E9B7CE, #D3F3F1);
+}
+</style>
+
+<body>
+<div class="container">
+
+ <div class="row align-items-center border">
+    <p class="text-center">Learn Javascript</p>
+ </div>
+ <script> /* destructure array
+  {const names = ["abdul", "budi", "cahya", "reza", "zaki"];
+  const [firstName, middleName, lastName, ...others] = names;
+
+  console.info(firstName);
+  console.info(middleName);
+  console.info(lastName);
+  console.info(others);
+ }
+*/
+ /*komentar lebih 
+ dari 1 baris
+ 
+ document.writeln untuk menampilkan tulisan di halaman
+ */
+ {
+
+    document.writeln('hello word');
+ }
+
+
+ /* tipe data number: bilangan bulat, desimal, pecahan. di javascript semua disatukan.
+ number tidak berlu diberikan ''.
+ document.writeln(100);
+
+ tipe data number
+ number notation:
+ hexadecimal : 0xFF
+ binary: 0b10101
+ Octal: 0o10
+ */
+ {
+document.writeln('<br>');
+document.writeln(0xFF11);
+document.writeln('<br>');
+ }
+
+ /*
+ tipe data boolean:
+ data kebenaran, true atau false.
+ akan banyak digunakan di pemrorgraman.
+ */
+
+ {
+document.writeln( true );
+document.writeln( false );
+ }
+
+ /*
+ Tipe data string:
+ membuat data string perlu menggunakan petik 2 atau 1 "",''
+ */
+{
+    document.writeln('wlf');
+    document.writeln("IT specialist");
+}
+
+// menambah string menggunkan operator +
+{
+    document.writeln('<br>');
+    document.writeln('Nama :' + 'wlf');
+    document.writeln('<br>');
+}
+
+/*
+escape sequance:
+\n = enter
+\t = TAB
+\' = '
+\" = "
+\\ = \
+*/
+
+{
+    document.writeln('nama\\wlf \"jakarta\"');  
+}
+
+/*
+variable: tempat utk menyimpan data.
+data yang ada di variable bisa digunakan kembali dengan menggunakan variablenya dengan kata kunci var.
+*/
+{
+var fullName;
+var firstName;
+var lastName;
+}
+
+/*
+mengubah value variable
+*/
+
+{
+    var fullName;
+    fullName = 'Wildan Fajri';
+//data akan berhenti disini 
+    fullName = 'Eko Kun';
+
+    fullName = 'Kurniawan';
+}
+
+// mengakses variable
+
+{
+    document.writeln(fullName);
+    document.writeln('<br>');
+}
+
+/*
+kata kunci let dan const.
+sblm tahunn 2015 menggunakan var. Sekarang semuanya menggunakan let dan const.
+*/
+{
+    let firstName='Budi';
+    let lastName='Anduk';
+    document.writeln(firstName + '<br>' + lastName);
+}
+
+/*kata kuinci conts. constant
+variable const tidak dapat diubah lagi sangat berbeda dengan var atau let.
+*/
+{
+    const application='game generator';
+   /* const application='generator';
+    variable const akan error jika dirubah.
+   */
+
+    document.writeln(application);
+}
+
+/* operator matematika
+operator Aritmatika:
++,-,*,**(exponensial/pangkat exp: 1**2,1**10), /, %(sisa bagi)
+*/
+
+{
+    let result = 1+2;
+    document.writeln('<br>1+2=' + result);
+    let originalResult=result;
+
+    result = result - 1;
+    document.writeln('<br>'+ originalResult + '-1='+ result);
+}
+
+/*
+operator augmented assignments.
+opeprator matematika
+result = result + 10 jika menggunakan augmented maaka: result+= 10
+*/
+{
+    document.writeln('<br>');
+    let result= 1;
+
+    result+= 1;
+    document.writeln(result);
+}
+
+/*
+operator unary: oeprator yang cukup membutuhkan 1 data.
+++ adalah increment: menaikan 1 angka.
+-- adalah decrement.
+*/
+{
+    let result = +1;
+    document.writeln('<br>' + result);
+
+    result++;
+    document.writeln('<br>' + result);
+}
+
+/*
+Operasi/operator Perbandingan.
+adalah operasi untuk membandingkan 2 buah data.
+operasi perbandingan adalah operasi yang menghasilkan nilai boolean (benar atau salah).
+>,<,>=,<=,==,===,!=,!==.
+*/
+{
+    let result = 5 ==="5";
+    let result2 = 5 =="5";
+    document.write('<br>'+result);
+    document.writeln(result2 + '<br>');
+}
+
+/*
+operator logika: operator untuk 2 buah data boolean.
+hasil dari operator logika adalah boolean lagi.
+&& dan, || atau, ! kebalikan.
+
+operator && jika ada false di 2 data maka hasilnya false.
+
+operator || jika ada true di 2 data maka hasilnya true.
+
+operator unery ! (digunakan untuk satu data)
+! true hasilnya false. 
+! false hasilnya true.
+*/
+{
+    const poin = 70;
+    const rank = 60;
+
+    const nilai = poin > 50;
+    const medal = rank > 60; 
+
+    const lulus = nilai && medal ;
+
+    document.writeln('luluskah?'+lulus+'<br>');
+}
+
+/*
+console.
+fitur logging untuk menampilkan info dari aplikasi yang berjalan tanpa mengganggunya.
+
+console.info untuk mbritahu informasi
+console.warn
+error
+table
+*/
+{
+    console.warn('hello');
+}
+
+/*
+string template adalah cara untuk mensubtitusi data dari luar string ke dalam string. seperti mengambil data variable atau melkakukan operasi matematika.
+menggunakan `(backtick)
+*/
+{
+    const name='wildan fajri';
+    const house= 'tebet';
+    const hobby= 'modelling';
+    const template=`Name :${name} ${house} ${hobby}`;
+
+    console.info(template);
+}
+
+// kode expression di string template.
+
+{
+    const name = 'wildan';
+    const value = 100;
+
+    const template = `Name : ${name}, Nilai : ${value>50}`;
+
+    console.info(template);
+}
+
+// multiline string
+{
+    let multiline =
+    `seperti menulis
+    biasa pada word
+    ketika enter, maka
+    membuat line baru`;
+    
+    console.info(multiline);
+}
+
+/*
+konversi string dan number.
+parseInt(string) untuk mengkonversi string ke number bilangan bulat. misal, 1.1 menjadi 1 saja.
+
+parseFloat(string) tuk mengkonversi number ke pecahan.
+
+Number(string) mengkonversi string ke number(bulat/pecahan).
+
+number.toString mengkonversi number ke string.
+*/
+{
+   const value1 = "1";
+   const value2 = 1;
+   const sum = value1 + value2;
+   document.writeln(`${sum}`+"<br>");
+//hasilnya 11 karena "1" dibaca string bukan number
+
+    const data1 = parseInt("1");
+    const data2 = 1;
+    const sum2 = data1 + data2;
+
+    document.writeln(`${sum2}`+"<br>");
+}
+
+/*
+NaN (Not a Number) data tidak falid, bisa ditolerir dengan parseInt atau parseFloat. Number tidak mentolerir Nan.
+
+isNan(string) utk mengecek Nan atau bukan.
+*/  
+    const data1 = Number("salah");
+    const data3 = 100;
+    const sum = data1 + data3;
+    document.writeln(`${sum}`+"<br>");
+
+    const data2 = 1;
+    document.writeln(`${isNaN(data2)}`+"<br>");
+
+{
+    const group1 = 5.1;
+    const group2 = 5;
+
+    const hasil = group1 * group2;
+
+    document.writeln(`${'parseInt ='} ${parseInt(hasil)}`+"<br>");
+    document.writeln(`${'parseFloat ='} ${parseFloat(hasil)} ${'<br>'}`);
+
+    document.writeln(`${parseInt(group1)} ${'<br>'}`);
+}
+
+/*
+Tipe Data Array. kumpulan data yang bisa bertambah.
+[]
+*/
+{
+    let arrayKosong = [];
+    let arrayNama = ['abdul', 'budi', 'cahyo'];
+}
+
+/*
+cara kerja array. bekerja secara berurutan dan dimulai dari 0(Nol) kemudian 1. urutan array disebut dengan index.
+*/
+{
+    let dataArray= [0,1,2,3,4,5,6]; //panjang array ada 7
+}
+
+// menambah array
+{
+    const names= [];
+    names.push('abdul');//data ke 0 adalah abdul
+    names.push('cahya', 'budi');
+
+    console.table(names);
+}
+/*
+Operasi Array:
+(array=nama arraynya)
+array.push(value) utk menambahkan data ke array.
+array.length utk mengetahui panjang array
+array[index] utk mendapat data, di posisi index
+array[index] = value utk mengubah data di posisi array
+delete array[index] tuk menghapus array tanpa mengubah posisi index.
+*/
+
+const data=['Jakarta', 'Bandung', 'Cirebon', 'Demak'];
+data.push('Enim', "fak-fak");
+delete data[4];
+data[0]= 'Jogja';
+data.push(['London', 'Manchester'], 'Brisbane');
+
+console.table(data);
+console.info(data.length);
+console.info(data[2]);
+
+// data array bisa apa saja, tidak harus string atau number. array juga bisa di dalam array (multidemsional array)
+
+/*
+Tipe Data Object.
+
+Associative Array.
+!index yang di js berupa angka tidak dapat dirubah menjadi string seperti di php. hal ini bisa menyebabkan bad behavior. Jika dipaksa memasukan data bukan number di index Array dan data tersebut akan berubah menjadi objct.
+
+
+Tipe Data Object. tipe data yang mirip Array, yg membedakan adalah index pada tipe data objct bisa menggunakan string. index di obcjt ini disebut dengan attributes atau properties, bukan index.
+*/
+    const person={};
+    //mengubah property/attribute
+    person['nama']='Anca';
+    person['tgl/lahir']='1 januari';
+    person['domisili']='Jakarta';
+    delete person['domisili'];
+
+    console.table(person);
+
+//membuat object dengan properties
+
+{
+    const data= {
+        'nama lengkap': 'Abdul',
+        asal: 'Jakarta',
+        status: 'kawin',
+        "tanggal lahir" : "5 oktober 1995", //menulis atribut dengan spasi menggunakan kutip.
+        umur: 30
+    };
+
+    console.table(data);
+    console.info(`Nama : ${data["nama lengkap"]}`);
+    console.info(`Asal : ${data.asal}`);
+}
+
+/*
+if Expression atau Percabangan.
+*/
+{
+    const nilai=80;
+    if (nilai >70){ //jika boolean true maka dieksekusi, viceversa.
+        document.writeln("<i>Lulus</i><br>")
+    }
+}
+
+// else expression
+
+{
+    const nilai=50;
+    if(nilai > 70){
+        document.writeln("lulus");
+    } else {
+        document.writeln('tidak lulus, coba lagi<br>');
+    }
+}
+
+//else if
+{
+    const nilai=100;
+    if (nilai > 80) {
+        document.writeln('a+');
+    } else if (nilai > 70){
+        document.writeln('a');
+    } else {
+        document.writeln('b');}
+    
+}
+
+/* pop up.
+alert: pop up peringatan. 
+prompt: meminta input string dari pengguna browser. confirm: meminta input boolean dalam bentuk pop up pilihan.
+*/
+{
+   // const name = prompt('tulis nama');
+   // alert(`Hallo ${name}`);
+
+   /*const login = confirm('wanna login?');
+   if(login) {
+    const nama = prompt('insert id');
+    alert(`hi ${nama}`);
+   } else {
+    alert('bye');
+   }*/
+}
+
+/*
+undefined. adalah kata kunci di JS dan sebuah data.
+undefined berbeda dengan null di program lain.
+*/
+{
+    /*let name ='asd';
+    if(name === undefined){
+        alert('UNDEFINED');
+    } else {
+        alert('defined');
+    }*/
+}
+/*
+null. adalah data kosong. Variable yg belum ditambahkan value nya.
+*/
+{
+    /*let name= null;
+    if(name === undefined){
+        alert('undefined');
+    } else if (name === null){
+        alert('null');
+    } else {
+        alert(name);
+    }*/
+}
+/*
+switch statement.
+kadang kita membutuhkan kondisi sederhana di if statment, seperti hanya menggunakan perbandingan ==.
+switch adalah statment percabangan uang sama dengan if namun lebih sederhana cara pembuatannya.
+kondisi di switch statement hanya untuk perbanddingan ==.
+*/
+{
+    /*const nilai = 'C';
+
+    switch (nilai){
+        case "A":
+            document.writeln('<p>100</p>');
+            break;
+        case "B":
+            document.writeln('<p>75</p>');
+            break;
+        case "C":
+            document.writeln('<p>65</p>');
+            break;
+        default: 
+        document.writeln('try again');
+    }*/
+
+   const nilai= 90;
+
+    switch (nilai){
+        case 100:
+            document.writeln('Sempurna');
+            break;
+        case (nilai > 80):
+            document.writeln('Bagus');
+            break;
+        default:
+            document.writeln("coba lagi");
+    }
+}
+/*
+Operator Typeof.
+utk mengecek type variable
+*/
+{
+    const cekdata = "asd";
+const typeData = typeof cekdata;
+document.writeln(`${typeData} ${"<br>"}`);
+}
+/*
+Operator in.
+berfungsi utk mengetahui apakah sebuah property ada di dalam object atau tidak secara boolean.
+bisa juga utk mengecek index di array.
+Hanya mengecek ada atau tidak, tidak mengecek value nya. null dan undefined akan tetap ada atau true.
+jadi hanya mengecek propertiynya atau variable, bukan value nya.
+*/
+{
+    const person= {
+        name: 'Abdul',
+        asal: 'London',
+    }
+
+    const result = 'umur' in person;
+    document.writeln(`${result}`);
+}
+/*
+Ternary Operator. opeerator lebih sederhana dari if statement.
+ternary operator terdiri dari kondisi yang dievaluasi, jika menghasilkan true maka nilai pertama diambil, jika false maka nilai kedua diambil.
+*/
+{
+const nilai = 60;
+ucapan = nilai >= 75 ? "Lulus" : "coba lagi";
+
+document.writeln(ucapan);
+}
+/*
+Nullish Coalescing Operator. adalah null dan undefined.
+mirip dengan ternary operator. Tapi jika bernilai null atau undefined, nilai default lah yang akan diambil.
+*/
+{
+    /*let parameter;
+
+    let data = parameter;
+    data = parameter ?? 'nilai default';
+
+    document.writeln(data);*/
+
+   let data=1;
+    let parameter = data;
+
+    data = parameter ?? 'nullish';
+
+    document.writeln(data+"<br>");
+
+}
+/*
+optional chaining. operator tanda tanya ?.
+operator yang digunakan untuk mengamankan ketika ingin mengakses property sebuah object dari data nullish.
+*/
+{
+    const person = {
+        address: {
+            country : "Indonesia"
+        }
+    };
+    let country = person?.address?.country;
+    document.writeln('optional changing');
+    document.writeln(`${country}${'<br>'}`);
+}
+
+/*
+Falsy atau falsey. value yang dalam konteks boolean dianggap false.
+
+Truthy. yaitu dimana datanya dianggap bernilai true
+data dianggap falsy: 
+false
+0,-0
+"",'',``
+null
+undefined
+NaN
+*/
+{
+    const data="";
+
+    if(data){
+        document.writeln("TRUE");
+    }else {
+        document.writeln("false");
+    }
+}
+/*
+operator logika di non boolean.
+AND && dan OR ||.
+
+Operator OR(||) membaca dari kiri ke kanan.
+mengambil nilai p[ertama yg truthy.
+*/
+{
+console.info("operator di non boolean" || "");
+console.info("" || []);
+
+// kapan penggunaannya? contoh..
+
+const person = {
+    firstName : "Dj",
+    lastName : "Kurniawan"
+};
+const nama = person.firstName || person.lastName;
+console.info(nama);
+}
+
+/*
+Operator AND(&&).
+membaca dari kiri ke kanan.
+operator ini akan mengambil nilai pertama yang falsy.
+jika tidak ada yang bernilai falsy, maka yang terakhir akan diambil. 
+*/
+
+console.info("hello" && "");
+// operator AND akan mengambil "" isinya kosong.
+
+/*
+perulangan.
+FOR LOOP.
+blok kode di dalam for akan selalu diulangi selama kondisi for terpenuhi.
+
+sintak perulangan For:
+for(init statment; kondiisi; post statement){
+    block perulangan
+}
+*/
+/*
+for(let counter= 1;counter <= 12; counter++){
+    document.writeln(`<p>${counter}`);
+}
+
+for(let data= 1; data <= 10; data++){
+    document.writeln(`<br>${data} `);
+}
+*/
+/*
+while loop.
+lebih sederhana dari for loop.
+hanya terdapat kondisi perulangan tanpa init statement dan post statement.
+*/
+document.writeln("<h4>while loop</h4>");
+/*
+{
+let counter=1;
+while (counter <= 10){
+    document.writeln(`<p> perulangan while ${counter}`)
+        counter++
+}
+}
+/**/
+{
+    let counter=15;
+    while (counter <=20){
+        document.writeln('<p>ini while');
+            counter++
+    }
+}
+/*
+do, while, loop. perulangan yang mirip dengan while.
+perbedaannya pada pengecekan kondisi.
+*/
+/*
+let counter= 1;
+do {
+    document.writeln(`<p>do while loop ${counter}`);
+    counter++
+} while (counter <= 10);
+*/
+/*
+/*
+break & continue.
+Continue digunakan utk menghentikan perulangan saat ini lalu melanjutkan ke perulangan selanjutnya.
+*/
+/*
+{
+    let counter = 1;
+    while(true){
+        document.writeln(`<p>ulang break ${counter}`);
+            counter++;
+
+            if(counter > 10){
+                break;
+            }
+    }
+}
+{
+    for(let i = 1; i<= 100;i++){
+        if(i % 2 === 0){
+            continue;
+        }
+        document.writeln(`<p>ganjil${i}`);
+    }
+}*/
+/*
+Function. untuk membuat kode program yg sering dieksekusi.
+*/
+document.writeln('<h3>Function</h3>');
+{
+    function sayHelloWorld(){
+        document.writeln("<p>Hello world function</p>");
+    }
+
+    sayHelloWorld();
+}
+/*
+function parameter
+*/
+{
+    function sayHello(firstName,lastName){
+        document.writeln(`<p>${firstName} ${lastName}</p>`);
+    }
+
+    sayHello('abdul', 'Joko');
+}
+
+// Function Return.
+{
+    function sayHello(firstName, lastName){
+        const say = `Hello ${firstName}${lastName}`;
+        return say;
+    }
+
+    const result =sayHello('abdul', 'joko');
+    document.writeln(`<p>${result}</p>`);
+
+    const sayHi= sayHello('Mukti', 'Raja');
+    document.writeln(`<br>${sayHi}`);
+}
+/*
+return value
+*/
+{
+function getFinalValue(value){
+    if(value > 90){
+        return "A";
+    }else if (value > 80){
+        return "B";
+    }else if (value > 70 ){
+        return "C";
+    }
+}
+
+
+
+
+
+}
+/*
+Optional Parameter.
+parameter di function itu optional
+*/
+document.writeln('<h3>Optional Parameter</h3>');
+{
+    function sayHello(firstName, middleName, lastName){
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+    }
+
+    sayHello("abdul");
+    sayHello("Eko","Udin","Joni");
+
+}
+{
+    function internet(email, youtube, website){
+        document.writeln(email);
+        document.writeln(youtube);
+        document.writeln(website);
+    }
+
+    internet('doc@mail.com', 'mail', 'www.mail');
+}
+
+/*
+Default Parameter.
+Mengisi value yg kosong, menjadi value yang ada di default parameter.
+*/
+document.writeln('<h3>Default Parameter</h3>');
+/*
+{
+    function register(name, gender = "Unknown"){
+        console.info(name);
+        console.info(gender);
+    }
+
+    register();
+    register('joko');
+    register('joko', 'male');
+}
+*/
+{
+    function absen(name, address = 'INDONESIA'){
+        document.writeln(name);
+        document.writeln(address);
+    }
+document.write("<br>");
+    absen('Jawed single line');
+    absen('Jawed','Co founder');
+}
+
+
+/*
+REST PARAMETER.
+mengirim data banyak dan secara otomatis akan menjadi array.
+ketentuannya adalah, rest parameter hanya ada 1 di dalam function.
+posisinya harus ada di paling akhir.
+*/
+{
+    function sum(name, ...data){
+        let total = 0;
+        for (const item of data){
+            total+=item;
+        }
+        document.writeln(`<p> Total ${name} is ${total}<p>`);
+    }
+
+    sum('rest parameter', 10,20,30,40);
+
+
+/*
+spread syntax.
+jika terlanjur memiliki data berupa array, kita tetap bisa mengirimnya ke rest parameter.
+caranya: gunakan ... ikuti dengan arraynya ketika memanggil function.
+*/
+
+sum('spread syntax', ...[10,10,10]);
+sum('spread syntax', ...[1,1,1]);
+
+}
+
+/*
+fitur lama sebelum rest parameter.
+ARGUMENTS OBJECT.
+*/
+
+/*
+FUNCTION SEBAGAI VALUE.
+artinya function bisa disimpan didalam variable, bisa juga dikirim melalui parameter ke function lainnya.
+*/
+{
+    function sayHello(name){
+        document.writeln(`<p>Hello ${name}</p>`);
+    }
+
+    sayHello('Joko');
+
+    const halo = sayHello;
+
+    halo('Jono');
+
+    function giveMeName(callback){
+        callback('Jhon');
+    }
+
+    giveMeName(sayHello);
+
+
+}
+
+/*
+ANONYMOUS FUNCTION.
+Function tanpa nama.
+*/
+{
+    let say = function(name){
+       document.writeln(`<br> hello ${name}`); 
+    }
+
+    say('Jhon Doe');
+}
+
+/*
+ANONYMOUS FUNCTION DI PARAMETER.
+*/
+document.writeln('<h4>Anonymous Function</h4>');
+{
+    const salam=function(words){
+        document.writeln(`<p>Halo ${words}</p>`)
+    }
+
+    salam('assalamualaikum');
+    salam('good morning');
+}
+/*
+FUNCTION di dalam function.
+function yg berada di dalam function disebut inner function.
+inner function hanya bisa diproses ditempat kita membuat functionnya.
+*/
+{
+    function outer(){
+        function inner(){
+            console.info("inner");
+        }
+
+        inner();
+    }
+    outer();
+}
+
+/* SCOPE.
+NESTED FUCNTION SCOPE
+*/
+{
+function first() {
+let firstVariable = "first";
+
+    function fistNested(){
+        console.info(firstVariable);
+    }
+  }
+}
+/*
+FUNCTION RECURSIVE.
+kemampuan fucntion memanggil dirinya sendiri.
+faktorial akan mudah dikerjakan dengan recursive function.
+*/
+{
+    function factorial(value){
+        let result = 1;
+        for(let i = 1; i <= value; i++){
+            result *=i;
+        }
+        return result;
+    }
+
+    document.writeln(factorial(5));
+
+    function factorialRecursive(value){
+        if(value === 1){
+            return 1;
+        }else{
+            return value * factorialRecursive(value-1);
+        }
+    }
+    document.writeln(factorialRecursive(5));
+    // 5 * factorialRecursive(4)
+    // 5 * factorialRecursive(3)
+    // 5 * factorialRecursive(2)
+    // 5 * factorialRecursive(1)
+    // 5*4*3*2*1
+}
+
+/*
+function generator.
+tempat utk mengenerate data.
+perlu menggunakan tanda * setelah nama function.
+utk mengembalikan data di tiap iterasi, kita bisa menggunakan kata yield diikuti datanya.
+*/
+{
+    function* createNames(){
+        yield "John";
+        yield "Eddie"
+        yield "Fransis"
+    }
+
+    const names = createNames();
+    for(const name of names){
+        console.info(name);
+    }
+}
+
+// ARROW FUNCTION
+{
+    const sayHello = (name) =>{
+        const say = `MY name is ${name}`;
+        console.info(say);
+    }
+
+    sayHello('Jhony');
+}
+
+//ARROW FUNCTION TANPA BLOCK
+{
+    const sayHello = (name) => document.writeln(`<br>my name is ${name}`);
+
+    sayHello('jhonn');
+}
+
+//ARROW FUNCTION RETURN VALUE
+{
+    const tambah= (first, second) => first+second;
+
+    console.info(tambah(50,50));
+}
+
+//ARROW FUNCTION TANPA KURUNG (utk 1 parameter)
+{
+    const sayHello= name => `namaku ${name}`;
+
+    console.info(sayHello('Jooko'));
+}
+
+/*ARROW FUNCTION As PARAMETER
+Karena arrow funtion sama seperti anonymous function. jadi bisa digunakan utk parameter di function lain.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//OBJECT Dg METHOD
+//atau funtion di dalam object.
+//cara pertama
+/*{
+const person= {
+    name : 'Harto',
+    sayHallo : function (name){
+        console.info(`hi ${name}`);
+    }
+}
+
+person.sayHallo('hahahah');*/
+//cara kedua jika sudah ada objectnya
+{
+const person= {
+    name : 'KOKO'
+};
+person.sayHallo = function(name){
+    document.writeln(`cara dua ${name}`);
+}
+person.sayHallo('asdkaskdasdkk');
+}
+
+/*
+kata kunci this.
+adalah refrensi object ke milik siapa.
+*/
+
+// this dibawah ini mengambil variable dari luar local scope.
+{
+    const person = {
+        name: 'Joni',
+        sayHello: function (value){
+            console.info(`Halo with this ${value} my name is${this.name}`);
+        }
+    }
+
+    person.sayHello('Doe');
+}
+
+/*
+ARROW FUNCTION di object.
+tidak bisa digunakan untuk mengakses argumen object, function generator, this, dan super.
+jadi pastikan menggunakan arrow function saat tidak menggunakan fitur diatas.
+*/
+{
+    document.writeln('<br>');
+    const person = {
+        name: 'Eko',
+        sayHello: (name) => {
+            document.writeln(`Hello ${name}`);
+        }
+    };
+
+    person.sayHello('Eco');
+}
+/*
+Getter Dan Setter.
+kemampuan membuat function yg berbeda utk mengambil data(getter) dan mengubah data (setter) pada sebuah property di object.
+*/
+{
+    const person = {
+        firstName: "Jhon",
+        lastName: "Dolo",
+        get fullName(){
+            return `${this.firstName}${this.lastName}`;
+        }
+    };
+    person.firstName = "Joko";
+    document.writeln(person.fullName);
+}
+{
+    const person = {
+        firstName: 'Andi',
+        lastName: 'Waluyo',
+        get fullName(){
+            return `${this.firstName} ${this.lastName}`;
+        }
+    };
+
+
+    document.writeln('<br>');
+
+    person.firstName = 'Anto';
+    document.writeln(person.fullName)
+
+// setter
+    
+
+}
+
+document.writeln('<br>')
+
+
+
+
+/*END*/
+document.writeln('<h3><br>END</h3>')
+//anonymous function dalam variable.
+{
+    let anonim= function (name){
+        document.writeln(`<br>Hello ${name}`)
+    }
+
+    anonim('Anonim fn');
+
+}
+
+//Anonymouse function dalam parameter.
+{
+    function giveMeName(callback){
+        callback('Kunto'); 
+    }
+
+    giveMeName(function(name){
+        document.writeln(`Hi ${name}`)
+    });
+}
+
+//test arrow function.
+{
+    document.writeln('<br> arrow function<br>');
+    let sayhai= name => `hai ${name}`;
+
+    document.writeln(sayhai('Joons<br>'));
+
+    let hai= name => `Hai day ${name}`;
+
+    document.writeln(hai('Monday'));
+}
+
+//test return value
+
+{
+    function nilai(score){
+    if(score > 80){
+        return 'A+';
+    } else if(score < 80){
+        return 'B';
+    };
+} 
+
+document.writeln(nilai(70));
+}
+
+{
+    function closeTab(){
+        window.close();
+    }
+}
+
+navigator.geolocation.getCurrentPosition(displayPosition)
+ </script>
+
+<button onclick="closeTab()">Close Tab</button>
+<div class="row align-items-center"><p class="text-center">end</p></div>
+</div>
+</body>
+</html>

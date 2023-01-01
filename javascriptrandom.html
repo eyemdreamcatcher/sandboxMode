@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .border {
+        outline: solid 0.5px;
+    }
+</style>
+<body>
+<h2 class="border">Javascript Test Random</h2>
+
+<script>
+// function di dalam variable dituliskan tanpa ()
+{function hello(name){
+    document.writeln(`Hello ${name}`);
+}
+
+let say = hello;
+
+say('Andi')
+}
+
+function sayHi(name){
+    document.writeln(`hi ${name}`);
+}
+
+let say = sayHi;
+
+say('Yono')
+
+function giveMeName(callback){
+    callback('Eco');
+}
+
+giveMeName(say)
+
+{
+
+    function sayWorld(country){
+        console.info(`this is world ${country}`)
+    }
+
+    let world = sayWorld;
+
+    world('Kanada');
+
+    function worldName(callback){
+        callback('Johanesburg');
+    }
+
+    worldName(world)
+}
+//function di parameter
+{   function age(year){
+    console.info(`your age ${year}`);
+}
+
+    let yourAge = age;
+
+    age('110');
+
+    function giveAge(callback){
+        callback('99');
+    }
+
+    giveAge(yourAge)
+}
+
+</script>
+</body>
+</html>

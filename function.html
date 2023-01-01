@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function javascript</title>
+</head>
+<body>
+
+<script>
+{
+function tambah(nilai1, nilai2){
+    return nilai1 + nilai2;
+}
+
+function kurang(nilai1, nilai2){
+    return nilai1 - nilai2
+}
+
+function kali(nilai1, nilai2){
+    return nilai1 * nilai2
+}
+
+function bagi (nilai1, nilai2){
+    return nilai1 / nilai2
+}
+}
+
+function calculate (nilai1, nilai2, arg){
+    switch(arg){
+        case 'tambah':
+            return tambah(nilai1, nilai2)
+        case 'kurang':
+            return kurang(nilai1, nilai2)
+        case 'kali' :
+            return kali(nilai1, nilai2)
+        case 'bagi' :
+            return bagi(nilai1, nilai2)
+        }
+}
+
+{
+    function counter(value1, value2){
+        return (value1 <= 1) + value2 
+    }
+}
+
+</script>
+</body>
+</html>
